@@ -163,40 +163,10 @@ body, html {height: 100%}
     	<div class="col-md-3"> รายละเอียดสินค้า <button class="item">ปุ่มเพิ่มสินค้า</button></div>
     </div>
 </div>
-	<ul class="cart">
-       
-    <!-- เมื่อคลิกที่คลาส item สินค้าตัวนั้นจะเข้ามาอยู่ในนี้-->
-        
+	<ul class="cart">     
+    <!-- เมื่อคลิกที่คลาส item สินค้าตัวนั้นจะเข้ามาอยู่ในนี้--> 
 	</ul>
-	    var cart = $(".cart");
-var cart_number = $(".cart_number");
-var close_id;
- 
-$(".item").each(function(index){
-	$(this).click(function(e){
-		  e.stopPropagation();
-		  if ($('.dropdown').find('.dropdown-menu').is(":hidden")){
-			$('.dropdown-toggle').dropdown('toggle');
-		  }
-		 addToCart(index);
-	});
-});
-function addToCart(index){ // เพิ่มสินค้าลงตะกร้า
-	var html = '<li id="item'+index+'"><a onClick="removeFromCart('+index+')">iPhone '+index+' <small>remove</small></a></li>';
-	cart.append(html);
-	cart_number.text($(".cart li").length); // อัพเดทตัวเลขสินค้าใน cart
-	clearTimeout(close_id);
-	close_id = setTimeout(closeDropdown,1500); // ปิดการแสดงรายการสินค้าใน cart
-}
-function removeFromCart(index){ // ลบสินค้าจากตะกร้า
-	clearTimeout(close_id);
-	$("#item"+index).remove(); // ลบสินค้า
-	cart_number.text($(".cart li").length); // อัพเดทตัวเลขสินค้าใน cart เมื่อลบสินค้า
-}
-function closeDropdown(){
-	clearTimeout(close_id);
-	$('.dropdown-toggle').dropdown('toggle');	
-}
+
 
       <center><img src="01-2.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-2</b> Plaid shirt<br/>Size: S M L XL<br/>Color: Black,White<br/>Price 300฿</h5></center>
