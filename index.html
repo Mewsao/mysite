@@ -158,6 +158,12 @@ body, html {height: 100%}
     <div class="w3-container">
       <center><img src="01-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-1</b> T-shirt<br/>Size: XS S M L XL<br/>Color: Salmon,White,Gray,Stone,Laurel Green<br/>Price 200฿</h5></center>
+	    <div class="container">
+	<div class="row">
+    	<div class="col-md-3"> รายละเอียดสินค้า <button class="item">ปุ่มเพิ่มสินค้า</button></div>
+    </div>
+</div>
+
       <center><img src="01-2.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-2</b> Plaid shirt<br/>Size: S M L XL<br/>Color: Black,White<br/>Price 300฿</h5></center>
       <center><img src="01-3.jpg" style="width:50%"></center>
@@ -251,119 +257,7 @@ body, html {height: 100%}
   </div>
 </div>
   
-  <?php
-session_start();
-require_once("config.php");#เรียกไฟล์เชื่อมต่อกับฐานข้อมูล
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
-<link rel="stylesheet" type="text/css" href="design.css">
-<title>Crochet ตุ๊กตาถักไหมพรม</title>
-</head>
-<body>
-<div id="container">
-  <div id="header">
-    <div id="headtext"> </div>
-    <div id="logo"></div>
-    <div id="bgright"></div>
-  </div>
-  <div id="menuarea">
-    <div id="menu">
-      <p id="text" align="center"><a href="fp_index.php">หน้าแีรก</a></p>
-    </div>
-    <div id="menu">
-      <p id="text" align="center"><a href="fp_showpd.php?all=showall">สินค้า</a></p>
-    </div>
-    <div id="menu">
-      <p id="text" align="center"><a href="#">วิธีสั่งซื้อ-ชำระเงิน</a></p>
-    </div>
-    <div id="menu">
-      <p id="text" align="center"><a href="#">ติดต่อเรา</a></p>
-    </div>
-  </div>
-  <div id="leftmenuarea">
-    <div id="content-left">
-      <div id="bg-loginbar">
-        <div id="loginbar" >สำหรับสมาชิก</div>
-      </div>
-      <? 
-	  include_once('flogin.php');
-	   ?>
-      <div id="bg-loginbar">
-        <div id="loginbar" >ค้นหาสินค้า</div>
-      </div>
-      <? include_once('searchpd.php'); ?>
-      <br />
-    </div>
-    <div id="contentX">
-      <div id="content1">
-        <div id="bg-pdbar">
-          <div id="pdbar"> <img src="images/icon/addtocart.png" width="24" height="24" /> My Cart<br />
-            <br />
-          </div>
-        </div>
-        <table width="100%" border="0" cellpadding="3" cellspacing="0" style="border:#fff solid 2px;">
-          <tr bgcolor="#0099FF">
-            <td width="69%"><strong>ชื่อสินค้า</strong></td>
-            <td width="13%" align="center"><strong>จำนวน</strong></td>
-            <td width="9%" align="center"><strong>ราคา</strong></td>
-            <td width="9%" align="center"><strong>ลบรายการ</strong></td>
-          </tr>
-          <? 
-	if(count($_SESSION["cartNumber"])>0){#จำนวนข้อมูลที่มีอยู่หากมากกว่า0
-	foreach($_SESSION["cartNumber"] as $RowCount){#วนลูปดึงข้อมูลสินค้าออกมาให้ครบตามจำนวนข้อมูลที่มีอยู่
-		$rs_showpd=$conn->Execute("SELECT* FROM tb_product WHERE pd_id=".$_SESSION[$RowCount][0]."");
-	if($rs_showpd->fields["pd_amount"]<1){#ตรวจสอบจำนวนสินค้า หากจำนวนสินค้าเท่ากับ0
-		echo "<script>";
-		echo "alert('ขออภัย".$rs_showpd->fields["pdname"]."สินค้าหมดแล้ว');window.location='chkcart.php?del=".$RowCount."';";
-        echo "</script>";
-		exit();
-	}
-	?>
-          <tr>
-            <td height="23"><?=$rs_showpd->fields["pd_name"]#ชื่อสินค้า?>
-              <input type="hidden" name="cartRows[]" id="cartRows[]" value="<?=$RowCount?>" />
-              <input type="hidden" name="pd_id[]" id="pd_id[]" value="<?=$rs_showpd->fields["pd_id"]#รหัสสินค้า?>" /></td>
-            <td align="center"><input name="pd_amount[]" type="text" id="pd_amount[]" size="5"  value="<?=$_SESSION[$RowCount][1]#จำนวนสินค้า?>"/></td>
-            <td align="center"><?=$_SESSION[$RowCount][2]#ราคาสินค้า?></td>
-            <td align="center"><a href="chkcart.php?del=<?=$RowCount?>"><img src="images/icon/del.gif" width="16" height="16"  border="0"/></a></td>
-          </tr>
-          <?
-		$TotalAmount+=$_SESSION[$RowCount][1];#คำนวณหาจำนวนสินค้าทั้งหมด
-		$TotalPrice+=$_SESSION[$RowCount][2];#คำนวณหาราคาสินค้าทั้งหมด
-		} 
-
-		?>
-          <tr>
-            <td height="23" align="right"><strong> รวม</strong></td>
-            <td align="center"><strong>
-              <?= $TotalAmount?>
-              </strong></td>
-            <td align="center"><strong>
-              <?= number_format($TotalPrice,2,".",",")?>
-              </strong></td>
-            <td align="center">&nbsp;</td>
-          </tr>
-          <? } else { ?>
-          <tr>
-            <td height="23" colspan="4" align="center"><strong>ไม่พบสินค้าในตระกร้า</strong></td>
-          </tr>
-          <? }  ?>
-        </table>
-      </div>
-      <div id="content2"></div>
-    </div>
-  </div>
-  <div class="clear"> </div>
-  <div id="footer">
-    <h1>copyright&copy;2010 http://pnwtt1987.blogspot.com</h1>
-  </div>
-</div>
-</body>
-</html>
-
+ 
 </body>
 </html>
 
