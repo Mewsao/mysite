@@ -24,8 +24,8 @@ body, html {height: 100%}
   <div class="w3-display-topleft w3-container w3-xlarge">
     <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">product catalog</button></p>
     <p><button onclick="document.getElementById('menu2').style.display='block'" class="w3-button w3-black">product details</button></p>
-    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">product catalog</button></p>
-    <p><button onclick="document.getElementById('menu5').style.display='block'" class="w3-button w3-black">place an order</button></p>
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">discounted product</button></p>
+    <p><button onclick="document.getElementById('place an order').style.display='block'" class="w3-button w3-black">place an order</button></p>
     <p><button onclick="document.getElementById('menu4').style.display='block'" class="w3-button w3-black">contact us</button></p>
   </div>b
   <div class="w3-display-bottomleft w3-container">
@@ -315,36 +315,22 @@ body, html {height: 100%}
   
 
   
-   <!-- Menu5 Modal -->
-<div id="menu5" class="w3-modal">
+   <!-- Contact Modal -->
+<div id="contact" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black w3-display-container">
-      <span onclick="document.getElementById('menu5').style.display='none'" 
-      class="w3-button w3-display-topright w3-large">x</span> 
-      
-    </div>
-     <div class="w3-container w3-black">
-      <h1>Place an order</h1>
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
     </div>
     <div class="w3-container">
-      <h5>Name : <Input Type="text" size="15" maxlength="25"></h5>
-      <h5>Last name : <Input Type="text" size="15" maxlength="25"></h5>  
-      <h5>Email: <input type="text" name="email" size=13></h5>
-      <h5>Address : <Input Type="text" size="15" maxlength="50"></h5>
-      <h5>Phone number : <Input Type="text" size="15" maxlength="20"></h5>
-      <h5>Product code : <Input Type="text" size="15" maxlength="50"></h5>
-      <h5>example:<b>01-1,04-2...</h5>
-      <SELECT>
-      <OPTION SELECTED>---Delivery channel---
-      <OPTION VALUE=1>REG
-      <OPTION VALUE=2>EMS
-      <OPTION VALUE=2>Kerry
-      <OPTION VALUE=2>J&T
-      <OPTION VALUE=2>Flash
-      </SELECT>
-      <h5>We will reply to you By your phone number and email within 5 minutes. "Thank you"</h5>
-      <Input type="submit" value="SEND" name="data">&nbsp;<Input type="reset" value="DELETE" name="data"> 
-    </div>
+      <p>Reserve a table, ask for today's special or just send us a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>
+      </form>
     </div>
   </div>
 </div>
