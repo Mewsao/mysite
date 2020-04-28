@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+<!-- เริ่มต้นในการเขียนโค้ด -->
 <html>
-<title>W3.CSS Template</title>
+<title>W3.CSS Template</title>  <!-- ใช้โค้ดในการเขียนจาก W3.CSS -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
-<style>
-body,h1,h5 {font-family: "Itim", cursive}
+   <!-- ใช้ font Itim ใน h1 และ h5 -->
+<style>  
+  
+body,h1,h5 {font-family: "Itim", cursive} 
 body, html {height: 100%}
 .bgimg {
   background-image:url('https://images.shopspotter.in.th/wp-content/uploads/2018/01/09191352/shopspotter_jan18_5tricks.jpg');
@@ -16,12 +19,12 @@ body, html {height: 100%}
 }
 </style>
 <body>
-
+<!--เริ่มต้นเขียนหน้าเพจ -->
 <div class="bgimg w3-display-container w3-text-black">
   <div class="w3-display-middle w3-jumbo">
-    <center><p><b>THIS'S ME</b></p></center>
+    <center><p><b>THIS'S ME</b></p></center> <!-- เพิ่มข้อมูลชื่อร้าน -->
   </div>
-  <div class="w3-display-topleft w3-container w3-xlarge">
+  <div class="w3-display-topleft w3-container w3-xlarge"> <!-- เพิ่มปุ่มในการกดเลือกเมนู -->
     <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">product catalog</button></p>
     <p><button onclick="document.getElementById('menu2').style.display='block'" class="w3-button w3-black">product details</button></p>
     <p><button onclick="document.getElementById('menu3').style.display='block'" class="w3-button w3-black">discounted product</button></p>
@@ -29,16 +32,16 @@ body, html {height: 100%}
     <p><button onclick="document.getElementById('menu5').style.display='block'" class="w3-button w3-black">contact us</button></p>
   </div>b
   <div class="w3-display-bottomleft w3-container">
-    <p class="w3-xlarge">monday - friday 10-20 | saturday 14-23</p>
-    <p class="w3-large">99 Bangkok St, Thailand</p>
+    <p class="w3-xlarge">monday - friday 10-20 | saturday 14-23</p> <!-- แสดงข้อมูลวันเปิดของร้าน -->
+    <p class="w3-large">99 Bangkok St, Thailand</p> <!-- แสดงที่ตั้งของร้าน -->
     
-  </div>
+  </div>  <!-- จบการทำงานในส่วนแรก -->
 </div>
   
   
 
 <!-- Menu Modal -->
-<div id="menu" class="w3-modal">
+<div id="menu" class="w3-modal"> <!-- เริ่มต้นในส่วนของ menu -->
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black w3-display-container">
       <span onclick="document.getElementById('menu').style.display='none'" 
@@ -46,9 +49,9 @@ body, html {height: 100%}
       
     </div>
      <div class="w3-container w3-black">
-      <h1>Shirts</h1>
+      <h1>Shirts</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า Shirts -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ Shirts -->
       <center><img src="01.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-1</b></h5> </center><br/>
       <center><img src="02.jpg" style="width:50%"></center>
@@ -59,12 +62,12 @@ body, html {height: 100%}
       <center><h5>NO.<b>01-4</b></h5></center><br/>
       <center><img src="05.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-5</b></h5></center><br/>
-    </div>
+    </div> <!-- จบการทำงานในส่วนของ Shirts -->
     
      <div class="w3-container w3-black">
-      <h1>Pants</h1>
+      <h1>Pants</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า Pants -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ Pants -->
       <center><img src="06.jpg" style="width:50%"></center>
       <center><h5>NO.<b>02-1</b></h5></center><br/>
       <center><img src="07.jpg" style="width:50%"></center>
@@ -78,9 +81,9 @@ body, html {height: 100%}
     </div>
                                         
      <div class="w3-container w3-black">
-      <h1>skirts</h1>
+      <h1>skirts</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า skirts -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ skirts -->
       <center><img src="a.jpg" style="width:50%"></center>
       <center><h5>NO.<b>03-1</b></h5></center><br/>
       <center><img src="b.jpg" style="width:50%"></center>
@@ -94,9 +97,9 @@ body, html {height: 100%}
     </div>       
                                                                    
      <div class="w3-container w3-black">
-      <h1>Shoes</h1>
+      <h1>Shoes</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า shoes -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ shoes -->
       <center><img src="11.jpg" style="width:50%"></center>
       <center><h5>NO.<b>04-1</b></h5></center><br/>
       <center><img src="12.jpg" style="width:50%"></center>
@@ -110,9 +113,9 @@ body, html {height: 100%}
     </div>
       
      <div class="w3-container w3-black">
-      <h1>Bags</h1>
+      <h1>Bags</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า bags -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ bags -->
       <center><img src="21.jpg" style="width:50%"></center>
       <center><h5>NO.<b>05-1</b></h5></center><br/>
       <center><img src="22.jpg" style="width:50%"></center>
@@ -127,9 +130,9 @@ body, html {height: 100%}
       
        
      <div class="w3-container w3-black">
-      <h1>Glasses</h1>
+      <h1>Glasses</h1> <!-- เพิ่มข้อมูลใน catalog product ว่า glasses  -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- เพิ่มรูปภาพในส่วนของ glasses -->
       <center><img src="26.jpg" style="width:50%"></center>
       <center><h5>NO.<b>06-1</b></h5></center><br/>
       <center><img src="27.jpg" style="width:50%"></center>
@@ -143,14 +146,14 @@ body, html {height: 100%}
      </div>
     </div>
   </div>
- </div>
+ </div> <!-- จบโค้ดใส่วนของ catalog product -->
   
 
   
 
      
   <!-- Menu2 Modal -->
-<div id="menu2" class="w3-modal">
+<div id="menu2" class="w3-modal"> <!-- เริ่มต้นในส่วนของ menu2 -->
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black w3-display-container">
       <span onclick="document.getElementById('menu2').style.display='none'" 
@@ -158,9 +161,9 @@ body, html {height: 100%}
       
     </div>
      <div class="w3-container w3-black">
-      <h1>Shirts details</h1>
+      <h1>Shirts details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ shirts -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Shirts -->
       <center><img src="01-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-1</b> T-shirt<br/>Size: XS S M L XL<br/>Color: Salmon,White,Gray,Stone,Laurel Green<br/>Price 200฿</h5></center><br/>
       <center><img src="01-2.jpg" style="width:50%"></center>
@@ -171,12 +174,12 @@ body, html {height: 100%}
       <center><h5>NO.<b>01-4</b> Sweater<br/>Size: Oversize<br/>Color: Black,Cedar,Cinnamon,Coral<br/>Price 300฿</h5></center><br/>
       <center><img src="01-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>01-5</b> Vest<br/>Size: Freesize(Chest-40)<br/>Color: Fog,White,Black,Plum<br/>Price 250฿</b></h5></center><br/>
-    </div>
+    </div> <!-- จบการอธิบายข้อมูลของ Shirts -->
     
     <div class="w3-container w3-black">
-      <h1>Pants details</h1>
+      <h1>Pants details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ Pants -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Pants -->
       <center><img src="02-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>02-1</b> Vintage pants<br/>Size: Freesize(waist-31,hip-41)<br/>Color: Black,Gray,White,Khaki<br/>Price 400฿</h5></center><br/>
       <center><img src="02-2.jpg" style="width:50%"></center>
@@ -187,12 +190,12 @@ body, html {height: 100%}
       <center><h5>NO.<b>02-4</b> Shorts<br/>Size: Freesize(waist-31,hip-41)<br/>Color: Cotton,Dijon<br/>Price 350฿</h5></center><br/>
       <center><img src="02-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>02-5</b> trousers(Details)<br/>Size: Freesize(waist-34,hip-41)<br/>Color: Black,Cream<br/>Price 450฿</h5></center><br/>
-    </div>
+    </div> <!-- จบการอธิบายข้อมูลของ Pants -->
                                         
     <div class="w3-container w3-black">
-      <h1>Skirts details</h1>
+      <h1>Skirts details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ Skirts -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Skirts -->
       <center><img src="03-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>03-1</b> Vintage skirt<br/>Size: Freesize(waist-31,hip-41)<br/>Color: White,Cream<br/>Price 400฿</h5></center><br/>
       <center><img src="03-2.jpg" style="width:50%"></center>
@@ -203,12 +206,12 @@ body, html {height: 100%}
       <center><h5>NO.<b>03-4</b> Skirt+belt<br/>Size: Freesize(waist-34,hip-41)<br/>Color: Black,Dijon,Big dip o'ruby,Cream<br/>Price 400฿</h5></center><br/>
       <center><img src="03-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>03-5</b> Vintage skirt<br/>Size: S M L XL<br/>Color: Cream,Black<br/>Price 400฿</h5></center><br/>
-    </div>       
+    </div> <!-- จบการอธิบายข้อมูลของ Skirts -->       
                                                                    
     <div class="w3-container w3-black">
-      <h1>Shoes details</h1>
+      <h1>Shoes details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ Shoes -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Shoes -->
       <center><img src="04-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>04-1</b> Weave shoes<br/>Size(EU): 35-41<br/>Color: Black,Pink,Blue,Red<br/>Price 390฿</h5></center><br/>
       <center><img src="04-2.jpg" style="width:50%"></center>
@@ -219,12 +222,12 @@ body, html {height: 100%}
       <center><h5>NO.<b>04-4</b> Slippers<br/>Size(EU): 35-41<br/>Color: White,Beige,Pink,Dark spring green<br/>Price 290฿</h5></center><br/>
       <center><img src="04-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>04-5</b> Boots<br/>Size(EU): 36-42<br/>Color: Black,Brown<br/>Price 790฿</h5></center><br/>
-    </div>
+    </div> <!-- จบการอธิบายข้อมูลของ Shoes -->
       
     <div class="w3-container w3-black">
-      <h1>Bags details</h1>
+      <h1>Bags details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ Bags -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Bags -->
       <center><img src="05-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>05-1</b> Anchan bag<br/>Size: 27x29x10cm<br/>Color: Blue,Beige<br/>Price 350฿</h5></center><br/>
       <center><img src="05-2.jpg" style="width:50%"></center>
@@ -235,13 +238,13 @@ body, html {height: 100%}
       <center><h5>NO.<b>05-4</b> Mini bag<br/>Size: 14x17cm<br/>Color: Beige,Black<br/>Price 250฿</h5></center><br/>
       <center><img src="05-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>05-5</b> Rectangle bag<br/>Size: 19.5x15x7cm<br/>Color: Black,Brown<br/>Price 450฿</h5></center><br/>
-    </div>
+    </div> <!-- จบการอธิบายข้อมูลของ Bags -->
       
       
     <div class="w3-container w3-black">
-      <h1>Glasses details</h1>
+      <h1>Glasses details</h1> <!-- ใส่ข้อมูลอธิบายในส่วนของ Glasses -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- อธิบายข้อมูลเกี่ยวกับ Glasses -->
       <center><img src="06-1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>06-1</b> Vintage glasses<br/>Color: Black,Brown,Yellow<br/>Price 200฿</h5></center><br/>
       <center><img src="06-2.jpg" style="width:50%"></center>
@@ -252,14 +255,14 @@ body, html {height: 100%}
       <center><h5>NO.<b>06-4</b> Vintage glasses<br/>Color: Red<br/>Price 200฿</h5></center><br/>
       <center><img src="06-5.jpg" style="width:50%"></center>
       <center><h5>NO.<b>06-5</b> Vintage sunglasses<br/>Color: Brown<br/>Price 200฿</h5></center><br/>
-    </div>
+    </div> <!-- จบการอธิบายข้อมูลของ Glasses -->
     </div>
   </div>
-</div>
+</div> <!-- จบในส่วนของการอธิบายข้อมูลของสินค้่าทั้งหมด -->
 
   
   <!-- Menu3 Modal -->
-<div id="menu3" class="w3-modal">
+<div id="menu3" class="w3-modal"> <!-- เริ่มต้นในส่วนของ menu3 -->
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black w3-display-container">
       <span onclick="document.getElementById('menu3').style.display='none'" 
@@ -267,9 +270,9 @@ body, html {height: 100%}
       
     </div>
      <div class="w3-container w3-black">
-       <font color="red"><h1><b>SALE!!!</b></h1></font>
+       <font color="red"><h1><b>SALE!!!</b></h1></font> <!-- เริ่มต้นในส่วนขอสินค้า sales -->
     </div>
-    <div class="w3-container">
+    <div class="w3-container"> <!-- ใส่รูปสินค้าและราคา และใส่ font สีแดง -->
       <center><img src="s1.jpg" style="width:50%"></center>
       <center><h5>NO.<b>s-1</b></h5><del>Price 350฿</del><br/><font color="Red"><b>SALE 175฿</b></font></center><br/>
       <center><img src="s2.jpg" style="width:50%"></center>
@@ -290,22 +293,22 @@ body, html {height: 100%}
       <center><h5>NO.<b>s-9</b></h5><del>Price 300฿</del><br/><font color="Red"><b>SALE 150฿</b></font></center><br/>
       <center><img src="s10.jpg" style="width:50%"></center>
       <center><h5>NO.<b>s-10</b></h5><del>Price 350฿</del><br/><font color="Red"><b>SALE 175฿</b></font></center><br/>
-    </div>
+    </div> <!-- จบในส่วนของสินค้า sales -->
   </div>
-</div>
+</div> 
 
   
 
   
-   <!-- Menu4 Modal -->
-<div id="menu4" class="w3-modal">
+   <!-- Menu4 Modal --> 
+<div id="menu4" class="w3-modal"> <!-- เริ่มต้นในส่วนของ menu4 -->
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black">
       <span onclick="document.getElementById('menu4').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       <center><h1>place an order</h1></center>
     </div>
     <div class="w3-container">
-      <p>Order by completing the information:</p>
+      <p>Order by completing the information:</p> <!-- ให้ลูกค้ากรอกฟอร์มข้อมูลในส่วนที่ลูกค้าต้องการสั่งสินค้า -->
       <form action="/action_page.php" target="_blank">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Lastname" required name="Lastname"></p>
@@ -317,16 +320,16 @@ body, html {height: 100%}
         <p><input class="w3-input w3-padding-16 w3-border" type=text" placeholder="REG/EMS" required name="REG/EMS"></p>
         <center><h5>We will respond to customers via phone or email within 5 minutes.</h5></center>
         <center><p><button class="w3-button" type="submit">SEND MESSAGE</button></p></center>
-      </form>
-    </div>
+      </form> 
+    </div> 
   </div>
-</div>
+</div> <!-- จบฟอร์มที่ลูกค้าต้องกรอกในกรณีที่สั่งซื้อสินค้า -->
  
 
 
 
- <!-- Menu5 Modal -->
-<div id="menu5" class="w3-modal">
+ <!-- Menu5 Modal --> 
+<div id="menu5" class="w3-modal"> <!-- เริ่มต้นในส่วนของ menu5 -->
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-black w3-display-container">
       <span onclick="document.getElementById('menu5').style.display='none'" 
@@ -334,22 +337,22 @@ body, html {height: 100%}
       
     </div>
      <div class="w3-container w3-black">
-      <h1>contact us</h1>
+      <h1>contact us</h1> <!-- เริ่มต้นในเพจ contact us -->
     </div>
     <div class="w3-section">
-      <center><img src="555.png" style="width:30%"></center>
+      <center><img src="555.png" style="width:30%"></center> <!-- ใส่ข้ออธิบายเพื่อลูกค้าสามารถติดต่อได้ -->
       <p><i class="fa fa-map-marker fa-fw w3-text-Black w3-xxlarge w3-margin-right"></i> Location: 99 Bangkok St, Thailand</p>
       <p><i class="fa fa-phone fa-fw w3-text-ฺBlack w3-xxlarge w3-margin-right"></i> Phone: +66937096455</p>
       <p><i class="fa fa-envelope fa-fw w3-text-Black w3-xxlarge w3-margin-right"> </i> Email: Thisisme@gmail.com</p>
       <p><i class="fa fa-map-marker fa-fw w3-text-ฺBlack w3-xxlarge w3-margin-right"></i> Facebook:  <a href="https://web.facebook.com/Thiss-ME-store-112226490469455/">This's ME store</a></p>
-    </div>
+    </div> <!-- จบการทำงานในส่วน contact us -->
   </div>
 </div>
 
 
   
 </body>
-</html>
+</html> <!-- จบการเขียนโค้ด -->
 
 
     
